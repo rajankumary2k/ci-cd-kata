@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-	sh "chmod +x gradlew"
 	stage('Test') {
             steps {
                 echo 'Testing..'
+	sh "chmod +x gradlew"
 	sh " ./gradlew test"
             }
         }
